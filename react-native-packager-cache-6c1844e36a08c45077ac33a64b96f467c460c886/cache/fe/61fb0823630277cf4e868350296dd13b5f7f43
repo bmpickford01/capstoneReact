@@ -1,0 +1,114 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.NavTitle = exports.NavButtonText = exports.NavButton = exports.NavGroup = undefined;
+var _jsxFileName = "/home/benjamin/capstone/capstone/node_modules/react-native-nav/index.js";
+
+var _NavGroup = require("./components/NavGroup");
+
+Object.defineProperty(exports, "NavGroup", {
+  enumerable: true,
+  get: function get() {
+    return _NavGroup.NavGroup;
+  }
+});
+
+var _NavButton = require("./components/NavButton");
+
+Object.defineProperty(exports, "NavButton", {
+  enumerable: true,
+  get: function get() {
+    return _NavButton.NavButton;
+  }
+});
+
+var _NavButtonText = require("./components/NavButtonText");
+
+Object.defineProperty(exports, "NavButtonText", {
+  enumerable: true,
+  get: function get() {
+    return _NavButtonText.NavButtonText;
+  }
+});
+
+var _NavTitle = require("./components/NavTitle");
+
+Object.defineProperty(exports, "NavTitle", {
+  enumerable: true,
+  get: function get() {
+    return _NavTitle.NavTitle;
+  }
+});
+
+var _react = require("react");
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _propTypes = require("prop-types");
+
+var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+
+var _reactNative = require("react-native");
+
+var _StatusBarEnhanced = require("./components/StatusBarEnhanced");
+
+var _styles = require("./styles");
+
+var _styles2 = babelHelpers.interopRequireDefault(_styles);
+
+function NavigationBar(_ref) {
+  var style = _ref.style,
+      children = _ref.children,
+      statusBar = _ref.statusBar;
+
+  var navBar = null;
+  if (_reactNative.Platform.OS === "ios") {
+    navBar = _react2.default.createElement(
+      _reactNative.View,
+      { style: [_styles2.default.navBar, _styles2.default.navBarIOS, style.navBar], __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        }
+      },
+      children
+    );
+  } else if (_reactNative.Platform.OS === "android") {
+    navBar = _react2.default.createElement(
+      _reactNative.View,
+      { style: [_styles2.default.navBar, _styles2.default.navBarAndroid, style.navBar], __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        }
+      },
+      children
+    );
+  }
+
+  return _react2.default.createElement(
+    _reactNative.View,
+    { style: [_styles2.default.navBarContainer, style.navBarContainer], __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      }
+    },
+    _react2.default.createElement(_StatusBarEnhanced.StatusBarEnhanced, { style: style.statusBar, statusBar: statusBar, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      }
+    }),
+    navBar
+  );
+}
+
+NavigationBar.propTypes = {
+  statusBar: _propTypes2.default.object,
+  style: _propTypes2.default.object,
+  children: _propTypes2.default.node
+};
+
+NavigationBar.defaultProps = {
+  style: {},
+  statusBar: {}
+};
+
+exports.default = NavigationBar;

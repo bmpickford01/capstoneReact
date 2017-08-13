@@ -1,0 +1,102 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.NavButton = undefined;
+var _jsxFileName = "/home/benjamin/capstone/capstone/node_modules/react-native-nav/components/NavButton.js";
+
+var _react = require("react");
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _propTypes = require("prop-types");
+
+var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+
+var _reactNative = require("react-native");
+
+var _styles = require("../styles");
+
+var _styles2 = babelHelpers.interopRequireDefault(_styles);
+
+function NavButton(_ref) {
+  var style = _ref.style,
+      onPress = _ref.onPress,
+      children = _ref.children,
+      disabled = _ref.disabled,
+      disabledStyle = _ref.disabledStyle,
+      accessibilityLabel = _ref.accessibilityLabel;
+
+  var navButtonStyles = [];
+  if (_reactNative.Platform.OS === "ios") {
+    navButtonStyles = [_styles2.default.navBarButtonIOS];
+  } else if (_reactNative.Platform.OS === "android") {
+    navButtonStyles = [_styles2.default.navBarButtonAndroid];
+  }
+  if (disabled) {
+    navButtonStyles.push(disabledStyle);
+  } else {
+    navButtonStyles.push(style);
+  }
+
+  var getTouchable = function getTouchable() {
+    if (disabled) {
+      return _react2.default.createElement(
+        _reactNative.TouchableOpacity,
+        {
+          accessibilityLabel: accessibilityLabel,
+          accessibilityTraits: ["button", "disabled"], __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29
+          }
+        },
+        _react2.default.createElement(
+          _reactNative.View,
+          { style: navButtonStyles, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 32
+            }
+          },
+          children
+        )
+      );
+    }
+    return _react2.default.createElement(
+      _reactNative.TouchableOpacity,
+      {
+        accessibilityLabel: accessibilityLabel,
+        onPress: onPress,
+        accessibilityTraits: "button", __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
+        }
+      },
+      _react2.default.createElement(
+        _reactNative.View,
+        { style: navButtonStyles, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43
+          }
+        },
+        children
+      )
+    );
+  };
+
+  return getTouchable();
+}
+
+NavButton.propTypes = {
+  children: _propTypes2.default.node,
+  onPress: _propTypes2.default.func,
+  style: _reactNative.ViewPropTypes.style,
+  disabled: _propTypes2.default.bool,
+  disabledStyle: _reactNative.ViewPropTypes.style
+};
+
+NavButton.defaultProps = {
+  style: {},
+  disabledStyle: {},
+  disabled: false
+};
+
+exports.NavButton = NavButton;

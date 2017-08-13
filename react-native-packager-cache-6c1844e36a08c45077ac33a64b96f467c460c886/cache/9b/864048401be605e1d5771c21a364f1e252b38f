@@ -1,0 +1,110 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+var _jsxFileName = '/home/benjamin/capstone/capstone/app/Header.js';
+
+var _Entypo = require('@expo/vector-icons/Entypo');
+
+var _Entypo2 = babelHelpers.interopRequireDefault(_Entypo);
+
+var _react = require('react');
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNativeNav = require('react-native-nav');
+
+var _reactNativeNav2 = babelHelpers.interopRequireDefault(_reactNativeNav);
+
+var _reactNative = require('react-native');
+
+var Header = function (_Component) {
+  babelHelpers.inherits(Header, _Component);
+
+  function Header() {
+    babelHelpers.classCallCheck(this, Header);
+    return babelHelpers.possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+  }
+
+  babelHelpers.createClass(Header, [{
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        _reactNativeNav2.default,
+        { style: style, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 10
+          }
+        },
+        _react2.default.createElement(
+          _reactNativeNav.NavGroup,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 11
+            }
+          },
+          _react2.default.createElement(
+            _reactNativeNav.NavButton,
+            { onPress: function onPress() {
+                return _this2.props.context.props.navigation.navigate('DrawerOpen');
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 12
+              }
+            },
+            _react2.default.createElement(
+              _reactNativeNav.NavButtonText,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 13
+                }
+              },
+              _react2.default.createElement(_Entypo2.default, { size: 24, color: 'white', name: 'menu', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 14
+                }
+              })
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactNativeNav.NavTitle,
+          { style: style.title, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 18
+            }
+          },
+          "QUT"
+        ),
+        _react2.default.createElement(_reactNativeNav.NavGroup, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21
+          }
+        })
+      );
+    }
+  }]);
+  return Header;
+}(_react.Component);
+
+exports.default = Header;
+
+
+style = _reactNative.StyleSheet.create({
+  statusBar: {
+    backgroundColor: '#28487b'
+  },
+  navBar: {
+    backgroundColor: '#28487b'
+  },
+  title: {
+    fontSize: 17,
+    letterSpacing: 0.5,
+    color: '#ffffff'
+  }
+});

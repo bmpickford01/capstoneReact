@@ -1,0 +1,46 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNative = require('react-native');
+
+var _reactNavigation = require('react-navigation');
+
+var _Contacts = require('./links/Contacts');
+
+var _Contacts2 = babelHelpers.interopRequireDefault(_Contacts);
+
+var _Health = require('./links/Health');
+
+var _Health2 = babelHelpers.interopRequireDefault(_Health);
+
+var _Study = require('./links/Study');
+
+var _Study2 = babelHelpers.interopRequireDefault(_Study);
+
+var Links = (0, _reactNavigation.TabNavigator)({
+  Contact: {
+    screen: _Contacts2.default
+  },
+  Study: {
+    screen: _Study2.default
+  },
+  Health: {
+    screen: _Health2.default
+  }
+}, {
+  tabBarOptions: {
+    tabBarPosition: 'bottom',
+    activeTintColor: '#ffffff',
+    inactiveTintColor: '#ffffff',
+    style: {
+      backgroundColor: '#28487B'
+    }
+  }
+});
+
+exports.default = Links;

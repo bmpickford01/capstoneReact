@@ -1,0 +1,50 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNavigation = require('react-navigation');
+
+var _Courses = require('./courses/Courses');
+
+var _Courses2 = babelHelpers.interopRequireDefault(_Courses);
+
+var _Units = require('./courses/Units');
+
+var _Units2 = babelHelpers.interopRequireDefault(_Units);
+
+var _Badges = require('./courses/Badges');
+
+var _Badges2 = babelHelpers.interopRequireDefault(_Badges);
+
+var Courses = (0, _reactNavigation.TabNavigator)({
+  Courses: {
+    screen: _Courses2.default
+  },
+  Units: {
+    screen: _Units2.default
+  },
+  Badges: {
+    screen: _Badges2.default
+  }
+}, {
+  tabBarPosition: 'bottom',
+  swipeEnabled: false,
+  animationEnabled: false,
+  tabBarOptions: {
+    activeTintColor: '#ffffff',
+    inactiveTintColor: '#ffffff',
+    style: {
+      backgroundColor: '#28487B'
+    },
+    indicatorStyle: {
+      borderBottomColor: '#ffffff',
+      borderBottomWidth: 2
+    }
+  }
+});
+
+exports.default = Courses;

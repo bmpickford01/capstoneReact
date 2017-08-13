@@ -1,0 +1,45 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.NavGroup = undefined;
+var _jsxFileName = "/home/benjamin/capstone/capstone/node_modules/react-native-nav/components/NavGroup.js";
+
+var _react = require("react");
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _propTypes = require("prop-types");
+
+var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+
+var _reactNative = require("react-native");
+
+var _styles = require("../styles");
+
+var _styles2 = babelHelpers.interopRequireDefault(_styles);
+
+function NavGroup(_ref) {
+  var style = _ref.style,
+      children = _ref.children;
+
+  return _react2.default.createElement(
+    _reactNative.View,
+    { style: [_styles2.default.navGroup, style], __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      }
+    },
+    children
+  );
+}
+
+NavGroup.propTypes = {
+  style: _reactNative.ViewPropTypes.style,
+  children: _propTypes2.default.node
+};
+
+NavGroup.defaultProps = {
+  style: {}
+};
+
+exports.NavGroup = NavGroup;

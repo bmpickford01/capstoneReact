@@ -1,0 +1,94 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNativeMaterialBottomNavigation = require('react-native-material-bottom-navigation');
+
+var _reactNativeMaterialBottomNavigation2 = babelHelpers.interopRequireDefault(_reactNativeMaterialBottomNavigation);
+
+var _reactNative = require('react-native');
+
+var _Entypo = require('@expo/vector-icons/Entypo');
+
+var _Entypo2 = babelHelpers.interopRequireDefault(_Entypo);
+
+var _reactNavigation = require('react-navigation');
+
+var _Home = require('./app/components/Home');
+
+var _Home2 = babelHelpers.interopRequireDefault(_Home);
+
+var _Courses = require('./app/components/Courses');
+
+var _Courses2 = babelHelpers.interopRequireDefault(_Courses);
+
+var _Goals = require('./app/components/Goals');
+
+var _Goals2 = babelHelpers.interopRequireDefault(_Goals);
+
+var _Portfolio = require('./app/components/Portfolio');
+
+var _Portfolio2 = babelHelpers.interopRequireDefault(_Portfolio);
+
+var _Profile = require('./app/components/Profile');
+
+var _Profile2 = babelHelpers.interopRequireDefault(_Profile);
+
+var _Settings = require('./app/components/Settings');
+
+var _Settings2 = babelHelpers.interopRequireDefault(_Settings);
+
+var _Links = require('./app/components/Links');
+
+var _Links2 = babelHelpers.interopRequireDefault(_Links);
+
+var App = (0, _reactNavigation.DrawerNavigator)({
+  Home: {
+    screen: _Home2.default
+  },
+  Courses: {
+    screen: _Courses2.default
+  },
+  Goals: {
+    screen: _Goals2.default
+  },
+  Portfolio: {
+    screen: _Portfolio2.default
+  },
+  Links: {
+    screen: _Links2.default
+  },
+  Profile: {
+    screen: _Profile2.default
+  },
+  Settings: {
+    screen: _Settings2.default
+  }
+});
+
+exports.default = App;
+
+
+var styles = _reactNative.StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 2
+  },
+  leftMenu: {
+    flex: 1,
+    marginTop: 30,
+    backgroundColor: '#fff'
+  },
+  leftMenuItem: {
+    padding: 15,
+    marginRight: 25,
+    borderBottomWidth: 1
+  }
+});

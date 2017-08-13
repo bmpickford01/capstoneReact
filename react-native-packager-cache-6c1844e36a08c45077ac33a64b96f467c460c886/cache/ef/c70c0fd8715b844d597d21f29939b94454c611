@@ -1,0 +1,75 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+
+var _class,
+    _temp,
+    _jsxFileName = '/home/benjamin/capstone/capstone/app/components/links/Study.js';
+
+var _react = require('react');
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNative = require('react-native');
+
+var _reactNativeElevatedView = require('react-native-elevated-view');
+
+var _reactNativeElevatedView2 = babelHelpers.interopRequireDefault(_reactNativeElevatedView);
+
+var _Header = require('../../Header');
+
+var _Header2 = babelHelpers.interopRequireDefault(_Header);
+
+var Study = (_temp = _class = function (_React$Component) {
+  babelHelpers.inherits(Study, _React$Component);
+
+  function Study() {
+    babelHelpers.classCallCheck(this, Study);
+    return babelHelpers.possibleConstructorReturn(this, (Study.__proto__ || Object.getPrototypeOf(Study)).apply(this, arguments));
+  }
+
+  babelHelpers.createClass(Study, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        _reactNative.View,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13
+          }
+        },
+        _react2.default.createElement(_reactNative.StatusBar, { hidden: true, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 14
+          }
+        }),
+        _react2.default.createElement(_Header2.default, { context: this, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 15
+          }
+        }),
+        _react2.default.createElement(_reactNativeElevatedView2.default, { elevation: 4, style: styles.stayElevated, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16
+          }
+        })
+      );
+    }
+  }]);
+  return Study;
+}(_react2.default.Component), _class.navigationOptions = {
+  drawerLabel: 'Study'
+}, _temp);
+exports.default = Study;
+
+
+var styles = _reactNative.StyleSheet.create({
+  stayElevated: {
+    width: 100,
+    height: 100,
+    margin: 10,
+    backgroundColor: 'white'
+  }
+});
